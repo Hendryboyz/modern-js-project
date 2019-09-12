@@ -1,12 +1,9 @@
-import "./another";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log('Hello Project.');
+const title = 'Hello React with Webpack an Babel.';
 
-document.getElementById("my-button").addEventListener("click", function() {
-  console.log("I'm clicked!");
-  myFunction();
-});
-
-var myFunction = () => {
-  console.log("my-function");
-};
+ReactDOM.render(
+  <div>{title}</div>,
+  document.getElementById('app')
+);
