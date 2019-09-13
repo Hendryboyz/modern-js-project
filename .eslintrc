@@ -1,0 +1,9 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb", "eslint:recommended", "plugin:react/recommended"],
+    "rules": {
+        "max-len": [1, 120, 2, {"ignoreComments": true}],
+        "no-alert": "error",
+        "no-unused-vars": 0
+    }
+}
