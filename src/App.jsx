@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import sum from './another';
 
-const App = ({ title }) => (
-  <div>{title}</div>
-);
+const App = ({ title }) => {
+  const a = 1;
+  const b = 2;
+  return (
+    <div>{title}</div>
+  );
+};
 
 App.defaultProps = {
   title: 'Hello World',
