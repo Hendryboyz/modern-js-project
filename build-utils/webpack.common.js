@@ -1,12 +1,9 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const path = require('path');
 
 module.exports = {
-  mode: 'production',
-  devtool: 'source-map',
   entry: './src/index.js',
   module: {
     rules: [
@@ -20,11 +17,6 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx'],
   },
-  output: {
-    path: path.join(__dirname, '/dist'),
-    publicPath: '/',
-    filename: 'bundle.js',
-  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
@@ -33,8 +25,12 @@ module.exports = {
       template: './src/index.template.html',
     }),
   ],
+  output: {
+    path: path.resolve(__dirname, '../', 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js',
+  },
   devServer: {
-    contentBase: './dist',
-    hot: true,
+    contentBase: './dist'
   },
 };
