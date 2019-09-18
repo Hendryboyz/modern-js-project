@@ -1,9 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
   devtool: 'source-map',
   entry: './src/index.js',
   module: {
