@@ -5,6 +5,7 @@ import sum from './another';
 const App = ({ title }) => {
   const a = 1;
   const b = 2;
+  console.log(process.env.NODE_ENV);
   return (
     <div>{title}</div>
   );
